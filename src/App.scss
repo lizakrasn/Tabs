@@ -1,0 +1,59 @@
+html,
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  &__title {
+    text-align: center;
+  }
+}
+
+.tabs {
+  width: 800px;
+  margin: 50px auto;
+  text-decoration: none;
+
+  &__list {
+    display: flex;
+  }
+
+  &__tab {
+    width: 100%;
+    flex-grow: 1;
+    padding: 15px 0;
+    list-style-type: none;
+
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+  
+    background-color: rgb(149, 149, 248);
+    color: white;
+    border: 1px solid black;
+    border-right: none;
+    border-radius: 0;
+  
+    cursor: pointer;
+
+    &:last-child {
+      border-right: 1px solid black;
+    }
+
+    &--is-active {
+      color: black;
+      background-color: white;
+    }
+  }
+
+  &__slider {
+    height: 5px;
+    margin-top: 6px;
+
+    background-color: rgb(149, 149, 248);
+    transition: transform 300ms;
+  }
+}
