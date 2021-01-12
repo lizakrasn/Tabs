@@ -1,4 +1,4 @@
-# Valid-form
+# Tabs
 
 ### [DEMO](https://lizakrasn.github.io/Tabs/)
 
