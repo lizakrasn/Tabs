@@ -21,11 +21,16 @@ const tabList = [
   },
 ]
 
-const customRender = (tab) => {
+interface AppTabs {
+  value : string;
+  label : string;
+}
+
+const customRender = (tab : AppTabs) => {
   return `${tab.label} \u{1F384}`
 }
 
-const customRenderSecond = (tab, index) => {
+const customRenderSecond = (tab: AppTabs, index: number) => {
   if (index % 2 === 0) {
     return `${tab.label} \u{1F427}`
   } else {
@@ -37,7 +42,7 @@ function App() {
   const [tabs, setTabs] = useState(tabList)
   const [activeTab, setActiveTab] = useState(tabList[0]);
 
-  const onTabSelected = (tab) => {
+  const onTabSelected = (tab: AppTabs) => {
     setActiveTab(tab)
   }
 
@@ -47,18 +52,18 @@ function App() {
       <Tabs
         tabs={tabs}
         activeTab={activeTab}
-        onChange={onTabSelected}
+        handleOnClick={onTabSelected}
       />
       <Tabs
         tabs={tabs}
         activeTab={activeTab}
-        onChange={onTabSelected}
+        handleOnClick={onTabSelected}
         renderTab={customRender}
       />
       <Tabs
         tabs={tabs}
         activeTab={activeTab}
-        onChange={onTabSelected}
+        handleOnClick={onTabSelected}
         renderTab={customRenderSecond}
       />
     </div>
